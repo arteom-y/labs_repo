@@ -1,4 +1,11 @@
 
+class MyRunnable implements Runnable {
+
+    public void run(){
+       System.out.println("MyRunnable running");
+    }
+  }
+
 public class test_class {
 
 	/**
@@ -25,12 +32,18 @@ public class test_class {
 	    System.out.println("Product of A and B is");
 	    for (int i = 0; i < a.length; i++) {
 	           for (int j = 0; j < a[0].length; j++) {
-	               System.out.print(c[i][j] + " ");
+	               //System.out.print(c[i][j] + " ");
 	           }
-	           System.out.println();
+	           //System.out.println();
 	    }
 	    long elapsedTime = stopTime - startTime;
 	    System.out.println("Elapsed milliseconds: "+elapsedTime);
+	    
+	    Thread thread1 = new Thread(new MyRunnable());
+	    Thread thread2 = new Thread(new MyRunnable());
+	    
+	    thread1.start();
+	    thread2.start();
 	}
 	public static int[][] multiply(int[][] a, int[][] b) {
 	       int rowsInA = a.length;
