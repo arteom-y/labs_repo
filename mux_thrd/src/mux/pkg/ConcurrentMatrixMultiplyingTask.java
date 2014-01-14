@@ -29,7 +29,7 @@ public class ConcurrentMatrixMultiplyingTask implements Runnable {
                 row = context.nextRowNum();
             }
             System.out.println(Thread.currentThread().getName() + " обрабатывает ряд " + row);
-            // i'm not really sure if this matrix algorithm here is right, idk..
+            // 
             for (int j = 0; j < matrixB[0].length; j++) {
                 for (int k = 0; k < matrixA[0].length; k++) {
                     matrixProduct[row][j] += matrixA[row][k] * matrixB[k][j];

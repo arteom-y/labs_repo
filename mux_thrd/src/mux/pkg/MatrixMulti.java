@@ -7,10 +7,6 @@ import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- * @date 21.11.2012
- * @author Thomas Jahoda
- */
 public class MatrixMulti {
 	public static final int numberOfThreads=10;
     public static void main(String[] args) {
